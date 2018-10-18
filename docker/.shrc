@@ -1,0 +1,8 @@
+alias dc='docker-compose'
+alias dcb='docker-compose build --no-cache'
+alias dcu='docker-compose up -d'
+alias dcd='docker-compose down'
+alias dcr='docker-compose run --rm'
+alias dcrt='docker-compose run --rm -it'
+alias dce='docker-compose exec'
+alias dcc='docker-compose config'

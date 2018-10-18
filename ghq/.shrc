@@ -1,0 +1,2 @@
+export GHQ_ROOT=~/repos/main/src
+alias glook='ghq look'
