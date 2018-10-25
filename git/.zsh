@@ -1,5 +1,5 @@
 DIR=$(cd $(dirname $0); pwd)
-source ${DIR}/.shrc
+source ${DIR}/.sh
 source ${DIR}/git-prompt.zsh
 
 ZSH_THEME_GIT_PROMPT_PREFIX="["

@@ -12,4 +12,4 @@
 
 ### zsh
 
-- `echo source "\${HOME}/repos/main/src/github.com/darmats/sh.conf/init.zshrc" >> ~/.zshrc`
+- `echo source "\${HOME}/repos/main/src/github.com/darmats/sh.conf/init.zsh" >> ~/.zshrc`
