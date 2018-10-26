@@ -1,11 +1,15 @@
 local ROOT=$(cd $(dirname $0); pwd)
 
-if [ -f ${ROOT}/direnvrc ] ; then
-  source ${ROOT}/direnvrc
+if [ -f ${ROOT}/direnvrc.sh ] ; then
+  source ${ROOT}/direnvrc.sh
 fi
 
+# for compatibility
 if [ -f ${ROOT}/secretrc ] ; then
   source ${ROOT}/secretrc
+fi
+if [ -f ${ROOT}/secretrc.sh ] ; then
+  source ${ROOT}/secretrc.sh
 fi
 
 alias ll='ls -lG'
