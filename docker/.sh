@@ -15,7 +15,8 @@ alias dnr='docker network rm'
 
 # docker-compose
 alias dc='docker-compose'
-alias dcb='docker-compose build --no-cache'
+alias dcb='docker-compose build'
+alias dcbn='docker-compose build --no-cache'
 alias dcc='docker-compose config'
 alias dcd='docker-compose down'
 alias dce='docker-compose exec'
@@ -25,3 +26,5 @@ alias dcps='docker-compose ps'
 
 # docker-machine
 alias dm='docker-machine'
+alias dmi='docker-machine inspect'
+alias dml='docker-machine ls'
