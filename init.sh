@@ -1,4 +1,6 @@
-ROOT=$(cd $(dirname $0); pwd)
+if [ -z $ROOT ]; then
+  ROOT=$(cd $(dirname $0); pwd)
+fi
 
 if [ -f ${ROOT}/direnvrc.sh ] ; then
   source ${ROOT}/direnvrc.sh
