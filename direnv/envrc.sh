@@ -7,4 +7,3 @@ use_ruby() {
   load_prefix $ruby_dir
   layout ruby
 }
-
