@@ -1,6 +1,6 @@
 ZSH_ROOT=$(cd $(dirname $0); pwd)
 
-source ${ZSH_ROOT}/init.sh
+source ${ZSH_ROOT}/root.sh
 
 zstyle -T ':completion:*:*:git:*' tag-order && \
 	zstyle ':completion:*:*:git:*' tag-order 'alias-commands' 'common-commands'
