@@ -1,4 +1,4 @@
-local ZSH_ROOT=$(cd $(dirname $0); pwd)
+ZSH_ROOT=$(cd $(dirname $0); pwd)
 
 source ${ZSH_ROOT}/init.sh
 

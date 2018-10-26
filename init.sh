@@ -1,4 +1,4 @@
-local ROOT=$(cd $(dirname $0); pwd)
+ROOT=$(cd $(dirname $0); pwd)
 
 if [ -f ${ROOT}/direnvrc.sh ] ; then
   source ${ROOT}/direnvrc.sh
