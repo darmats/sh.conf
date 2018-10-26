@@ -1,3 +1,6 @@
+CNF_OS=$(uname -s)
+# CNF_ARCH=$(uname -m)
+
 if [ -f ${CNF_ROOT}/direnvrc.sh ] ; then
   source ${CNF_ROOT}/direnvrc.sh
 fi
