@@ -1,6 +1,8 @@
-ZSH_ROOT=$(cd $(dirname $0); pwd)
+if [ -z $CNF_ROOT ]; then
+  CNF_ROOT=$(cd $(dirname $0); pwd)
+fi
 
-source ${ZSH_ROOT}/root.sh
+source ${CNF_ROOT}/root.sh
 
 zstyle -T ':completion:*:*:git:*' tag-order && \
 	zstyle ':completion:*:*:git:*' tag-order 'alias-commands' 'common-commands'
@@ -17,7 +19,7 @@ bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 # zstyle :compinstall filename '$($HOME)/.zshrc'
-zstyle :compinstall filename '$(${ZSH_ROOT})/init.zsh'
+zstyle :compinstall filename '$(${CNF_ROOT})/init.zsh'
 
 autoload -Uz compinit
 compinit
@@ -26,7 +28,7 @@ compinit
 # shell
 setopt hist_ignore_dups
 
-for file in `\find ${ZSH_ROOT} -type f -name .zsh`; do
+for file in `\find ${CNF_ROOT} -type f -name .zsh`; do
     source $file
     # echo $file
 done

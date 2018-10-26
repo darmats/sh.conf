@@ -1,17 +1,13 @@
-if [ -z $ROOT ]; then
-  ROOT=$(cd $(dirname $0); pwd)
-fi
-
-if [ -f ${ROOT}/direnvrc.sh ] ; then
-  source ${ROOT}/direnvrc.sh
+if [ -f ${CNF_ROOT}/direnvrc.sh ] ; then
+  source ${CNF_ROOT}/direnvrc.sh
 fi
 
 # for compatibility
-if [ -f ${ROOT}/secretrc ] ; then
-  source ${ROOT}/secretrc
+if [ -f ${CNF_ROOT}/secretrc ] ; then
+  source ${CNF_ROOT}/secretrc
 fi
-if [ -f ${ROOT}/secretrc.sh ] ; then
-  source ${ROOT}/secretrc.sh
+if [ -f ${CNF_ROOT}/secretrc.sh ] ; then
+  source ${CNF_ROOT}/secretrc.sh
 fi
 
 alias ll='ls -lG'
@@ -23,3 +19,8 @@ alias relogin='exec $SHELL -l'
 export PATH="/usr/sbin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
+
+for file in `\find ${CNF_ROOT} -type f -name .sh`; do
+    source $file
+    # echo $file
+done
