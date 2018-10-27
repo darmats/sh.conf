@@ -1,6 +1,9 @@
-DIR=$(cd $(dirname $0); pwd)
-source ${DIR}/.sh
-source ${DIR}/git-prompt.zsh
+command_exists 'gitstatus'
+if [ $? -ne 0 ]; then
+  return
+fi
+
+source ${CNF_ROOT}/git/git-prompt.zsh
 
 # for c in {000..255}; do echo -n "\e[38;5;${c}m $c" ; [ $(($c%16)) -eq 15 ] && echo;done;echo
 # GIT_BASE_COLOR="%{\e[38;5;110m%}"
