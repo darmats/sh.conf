@@ -19,4 +19,5 @@ ZSH_THEME_GIT_PROMPT_BEHIND="%{$fg[red]%}%{-%G%}"
 ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg[green]%}%{+%G%}"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{…%G%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}%{✔%G%}"
+# See also ${CNF_ROOT}/.shell/.zsh
 PROMPT=$'%m:%F{cyan}%n%f %F{yellow}%c%f $(git_super_status)%% '
