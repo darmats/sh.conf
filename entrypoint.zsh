@@ -11,7 +11,7 @@ zstyle -T ':completion:*:*:git:*' tag-order && \
 	zstyle ':completion:*:*:git:*' tag-order 'alias-commands' 'common-commands'
 
 if [ -d /usr/local/share/zsh-completions ]; then
-    fpath=(/usr/local/share/zsh-completions $fpath)
+  fpath=(/usr/local/share/zsh-completions $fpath)
 fi
 
 # Lines configured by zsh-newuser-install
@@ -21,8 +21,8 @@ SAVEHIST=1000
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-# zstyle :compinstall filename '$($HOME)/.zshrc'
-zstyle :compinstall filename '$(${CNF_ROOT})/init.zsh'
+zstyle :compinstall filename '$($HOME)/.zshrc'
+# zstyle :compinstall filename '$(${CNF_ROOT})/entrypoint.zsh'
 
 autoload -Uz compinit
 compinit
@@ -31,7 +31,7 @@ compinit
 # shell
 setopt hist_ignore_dups
 
-for file in `\find ${CNF_ROOT} -type f -name .zsh`; do
-    source $file
-    # echo $file
+for file in `\find ${CNF_ROOT} -type f -name .zsh | sort`; do
+  source $file
+  # echo $file
 done

@@ -1,4 +1,5 @@
-if ! builtin command -v direnv > /dev/null; then
+command_exists 'direnv'
+if [ $? -ne 0 ]; then
   return
 fi
 
