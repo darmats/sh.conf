@@ -12,3 +12,7 @@
 ### zsh
 
 - `echo source "\${HOME}/repos/main/src/github.com/darmats/sh.conf/entrypoint.zsh" >> ~/.zshrc`
+
+### bash
+
+- `echo source "\${HOME}/repos/main/src/github.com/darmats/sh.conf/entrypoint.bash" >> ~/.bashrc`
