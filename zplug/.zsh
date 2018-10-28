@@ -12,6 +12,8 @@ fi
 source $ZPLUG_HOME/init.zsh
 
 zplug "zsh-users/zsh-completions"
+zplug "b4b4r07/enhancd", use:"init.sh"
+zplug "rupa/z", use:"z.sh"
 
 if ! zplug check --verbose; then
   printf "Install? [y/N]: "
