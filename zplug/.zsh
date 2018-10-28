@@ -8,6 +8,9 @@ fi
 if [ -z $ZPLUG_HOME ]; then
   return
 fi
+if [ ! -f $ZPLUG_HOME/init.zsh ]; then
+  return
+fi
 
 source $ZPLUG_HOME/init.zsh
 
