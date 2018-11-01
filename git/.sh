@@ -15,6 +15,7 @@ function _git_cop() {
 }
 
 alias ga='git add'
+alias ga.='git add .'
 alias gs='git status'
 alias gst='git stash'
 alias gsts='git stash save'

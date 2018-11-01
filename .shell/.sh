@@ -1,8 +1,9 @@
 case ${CNF_OS} in
   'Darwin' )
     alias ll='ls -lG'
+    alias l='ll'
     alias la='ls -lGa'
-    alias llh='ls -lhG'
+    alias lh='ls -lhG'
     alias tlf='tail -f'
     alias relogin="exec $(which ${CNF_SHELL}) -l"
     ;;
@@ -14,7 +15,9 @@ case ${CNF_OS} in
     alias l.='ls -d .* --color=auto'
     alias ls='ls --color=auto'
     alias ll='ls -l --color=auto'
+    alias l='ll'
     alias la='ls -la --color=auto'
+    alias lh='ls -lha --color=auto'
     alias mv='mv -i'
     alias rm='rm -i'
     ;;
