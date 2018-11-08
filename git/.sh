@@ -14,6 +14,7 @@ function _git_cop() {
     git checkout $1 && git pull
 }
 
+alias g='git'
 alias ga='git add'
 alias ga.='git add .'
 alias gs='git status'
