@@ -14,7 +14,9 @@ function _git_cop() {
     git checkout $1 && git pull
 }
 
+alias g='git'
 alias ga='git add'
+alias ga.='git add .'
 alias gs='git status'
 alias gst='git stash'
 alias gsts='git stash save'
@@ -32,7 +34,8 @@ alias gf='git fetch'
 alias gfp='git fetch --prune'
 alias gd='git diff'
 alias gdc='git diff --cached'
-alias gpl='git pull'
+alias gpull='git pull'
+alias gpl='gpull'
 alias gplr='git pull --rebase'
 alias gpush='git push'
 alias gpsh='gpush'

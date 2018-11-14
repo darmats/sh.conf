@@ -28,3 +28,11 @@ alias dcps='docker-compose ps'
 alias dm='docker-machine'
 alias dmi='docker-machine inspect'
 alias dml='docker-machine ls'
+
+function dmc() {
+  if [ $# -eq 0 ]; then
+    eval $(docker-machine env)
+  else
+    eval $(docker-machine env ${1})
+  fi
+}
