@@ -14,6 +14,7 @@
 # https://github.com/magicmonty/bash-git-prompt
 # brew install bash-git-prompt
 if [ ! -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+  echo 'Run "brew install bash-git-prompt"'
   return
 fi
 
