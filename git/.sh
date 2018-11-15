@@ -1,16 +1,16 @@
-function _git_sta() {
+function _gsta() {
     git stash apply stash@{$1};
 }
 
-function _git_std() {
+function _gstd() {
     git stash drop stash@{$1};
 }
 
-function _git_cot() {
+function _gcot() {
     git fetch && git checkout origin/$1;
 }
 
-function _git_cop() {
+function _gcop() {
     git checkout $1 && git pull
 }
 
@@ -22,12 +22,12 @@ alias gst='git stash'
 alias gsts='git stash save'
 alias gstl='git stash list'
 alias gstp='git stash pop'
-alias gsta='_git_sta'
-alias gstd='_git_std'
+alias gsta='_gsta'
+alias gstd='_gstd'
 alias gco='git checkout'
 alias gcob='git checkout -b'
-alias gcot='_git_cot'
-alias gcop='_git_cop'
+alias gcot='_gcot'
+alias gcop='_gcop'
 alias gb='git branch'
 alias gba='git branch -a'
 alias gf='git fetch'
