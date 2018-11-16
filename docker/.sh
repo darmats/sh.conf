@@ -32,7 +32,8 @@ alias dcps='docker-compose ps'
 # docker-machine
 alias dm='docker-machine'
 alias dmi='docker-machine inspect'
-alias dml='docker-machine ls'
+alias dmls='docker-machine ls'
+alias dml='dmls'
 
 function dmc() {
   if [ $# -eq 0 ]; then
