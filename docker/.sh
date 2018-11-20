@@ -1,5 +1,7 @@
 # docker
 alias dk='docker'
+alias dkps='docker ps'
+alias dkpsa='docker ps -a'
 alias dki='docker images'
 alias dks='docker stats'
 alias dkv='docker volume'
