@@ -1,5 +1,4 @@
-command_exists 'direnv'
-if [ $? -ne 0 ]; then
+if [ -z $(command -v direnv) ]; then
   return
 fi
 

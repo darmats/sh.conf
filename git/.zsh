@@ -1,5 +1,4 @@
-command_exists 'gitstatus'
-if [ $? -ne 0 ]; then
+if [ -z $(command -v gitstatus) ]; then
   return
 fi
 

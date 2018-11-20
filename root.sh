@@ -1,11 +1,6 @@
 CNF_OS=$(uname -s)
 # CNF_ARCH=$(uname -m)
 
-command_exists() {
-  which $1 > /dev/null
-  return $?
-}
-
 # for compatibility
 if [ -f ${CNF_ROOT}/secretrc ] ; then
   source ${CNF_ROOT}/secretrc
