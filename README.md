@@ -5,7 +5,7 @@
 - Install homebrew
 - Install dependencies
   - `brew install golang`
-  - `go get -u github.com/darmats/go-zsh-git-prompt/gitstatus`
+  - `go get -u github.com/darmats/go-gitstatus/gitstatus`
 
 ## Setup
 
