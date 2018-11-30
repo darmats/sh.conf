@@ -1,4 +1,4 @@
-# sh-config
+# sh.conf
 
 ## Preparation
 
