@@ -31,4 +31,3 @@ ZSH_THEME_GIT_PROMPT_BEHIND="%{$fg[green]%}%{↘%G%}"
 ZSH_THEME_GIT_PROMPT_AHEAD="%{$fg[green]%}%{↗%G%}"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{…%G%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}%{✔%G%}"
-# See also ${CNF_ROOT}/.shell/.zsh
