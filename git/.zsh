@@ -5,8 +5,9 @@ setopt PROMPT_SUBST
 git_super_status() {
 }
 
+_RESET_COLOR="%{${reset_color}%}"
 if [ -z ${CONF_ZSH_PROMPT} ]; then
-  PROMPT=$'%{$fg_bold[green]%}%n@%m%{${reset_color}%}:%{$fg_bold[blue]%}%~%{${reset_color}%} $(git_super_status)$ '
+  PROMPT=$'%{$fg_bold[green]%}%n@%m${_RESET_COLOR}:%{$fg_bold[blue]%}%~${_RESET_COLOR} $(git_super_status)$ '
 else
   PROMPT=${CONF_ZSH_PROMPT}
 fi
@@ -21,7 +22,7 @@ source ${CNF_ROOT}/git/git-prompt.zsh
 # GIT_BASE_COLOR="%{\e[38;5;110m%}"
 GIT_BASE_COLOR="%{$fg[white]%}"
 ZSH_THEME_GIT_PROMPT_PREFIX="${GIT_BASE_COLOR}["
-ZSH_THEME_GIT_PROMPT_SUFFIX="${GIT_BASE_COLOR}]%{${reset_color}%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="${GIT_BASE_COLOR}]${_RESET_COLOR}"
 ZSH_THEME_GIT_PROMPT_SEPARATOR="${GIT_BASE_COLOR}|"
 ZSH_THEME_GIT_PROMPT_BRANCH="%{$fg[red]%}"
 ZSH_THEME_GIT_PROMPT_STAGED="%{$fg[green]%}%{%G%}"
