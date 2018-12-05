@@ -16,7 +16,7 @@ if [ -z $(command -v gitstatus) ]; then
   return
 fi
 
-source ${CNF_ROOT}/git/git-prompt.zsh
+source ${CNF_ROOT}/01.git/git-prompt.zsh
 
 # for c in {000..255}; do echo -n "\e[38;5;${c}m $c" ; [ $(($c%16)) -eq 15 ] && echo;done;echo
 # GIT_BASE_COLOR="%{\e[38;5;110m%}"
