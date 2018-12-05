@@ -1,17 +1,21 @@
+if [ -z $(command -v git) ]; then
+  return
+fi
+
 function _gsta() {
-    git stash apply stash@{$1};
+  git stash apply stash@{$1};
 }
 
 function _gstd() {
-    git stash drop stash@{$1};
+  git stash drop stash@{$1};
 }
 
 function _gcot() {
-    git fetch && git checkout origin/$1;
+  git fetch && git checkout origin/$1;
 }
 
 function _gcop() {
-    git checkout $1 && git pull
+  git checkout $1 && git pull
 }
 
 alias g='git'

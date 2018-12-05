@@ -1,4 +1,7 @@
 # docker
+if [ -z $(command -v docker) ]; then
+  return
+fi
 alias dk='docker'
 alias dkps='docker ps'
 alias dkpsa='docker ps -a'
@@ -22,6 +25,9 @@ alias dknrm='docker network rm'
 alias dknr='dknrm'
 
 # docker-compose
+if [ -z $(command -v docker-compose) ]; then
+  return
+fi
 alias dc='docker-compose'
 alias dcb='docker-compose build'
 alias dcbn='docker-compose build --no-cache'
@@ -33,6 +39,9 @@ alias dcu='docker-compose up -d'
 alias dcps='docker-compose ps'
 
 # docker-machine
+if [ -z $(command -v docker-machine) ]; then
+  return
+fi
 alias dm='docker-machine'
 alias dmi='docker-machine inspect'
 alias dmls='docker-machine ls'
