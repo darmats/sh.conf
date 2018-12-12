@@ -3,5 +3,5 @@ if [ -z $(command -v ghq) ]; then
 fi
 
 if [ -z $GHQ_ROOT ]; then
-  export GHQ_ROOT=$GOPATH
+  export GHQ_ROOT=${GOPATH}"/src"
 fi
