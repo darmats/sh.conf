@@ -7,7 +7,7 @@ git_super_status() {
 
 _RESET_COLOR="%{${reset_color}%}"
 if [ -z ${CONF_ZSH_PROMPT} ]; then
-  PROMPT=$'%{$fg_bold[green]%}%n@%m${_RESET_COLOR}:%{$fg_bold[blue]%}%~${_RESET_COLOR} $(git_super_status)$ '
+  PROMPT=$'%{$fg_bold[green]%}%n@%m${_RESET_COLOR}:%{$fg_bold[blue]%}$(shpwd)${_RESET_COLOR} $(git_super_status)$ '
 else
   PROMPT=${CONF_ZSH_PROMPT}
 fi
