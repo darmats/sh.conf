@@ -1,22 +1,13 @@
-autoload -U colors
-colors
-setopt PROMPT_SUBST
-# dummy
-git_super_status() {
-}
-
-_RESET_COLOR="%{${reset_color}%}"
-if [ -z ${CONF_ZSH_PROMPT} ]; then
-  PROMPT=$'%{$fg_bold[green]%}%n@%m${_RESET_COLOR}:%{$fg_bold[blue]%}$(shpwd)${_RESET_COLOR} $(git_super_status)$ '
-else
-  PROMPT=${CONF_ZSH_PROMPT}
-fi
-
 if [ -z $(command -v gitstatus) ]; then
   return
 fi
 
 source ${CNF_ROOT}/01.git/git-prompt.zsh
+
+# override
+git_status() {
+  git_super_status
+}
 
 # for c in {000..255}; do echo -n "\e[38;5;${c}m $c" ; [ $(($c%16)) -eq 15 ] && echo;done;echo
 # GIT_BASE_COLOR="%{\e[38;5;110m%}"
