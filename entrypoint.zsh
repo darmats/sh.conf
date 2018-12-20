@@ -11,7 +11,11 @@ zstyle -T ':completion:*:*:git:*' tag-order && \
 	zstyle ':completion:*:*:git:*' tag-order 'alias-commands' 'common-commands'
 
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
+# HISTFILE=~/.histfile
+if [ ! -d ~/.zsh ]; then
+  mkdir ~/.zsh
+fi
+HISTFILE=~/.zsh/histfile
 HISTSIZE=1000
 SAVEHIST=1000
 bindkey -e
@@ -20,8 +24,8 @@ bindkey -e
 zstyle :compinstall filename '$($HOME)/.zshrc'
 # zstyle :compinstall filename '$(${CNF_ROOT})/entrypoint.zsh'
 
-autoload -Uz compinit
-compinit
+# autoload -Uz compinit
+# compinit
 # End of lines added by compinstall
 
 # shell
@@ -31,3 +35,6 @@ for file in `\find ${CNF_ROOT} -type f -name .zsh | sort`; do
   source $file
   # echo $file
 done
+
+autoload -Uz compinit
+compinit
