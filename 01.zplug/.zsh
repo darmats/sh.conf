@@ -11,16 +11,14 @@ fi
 if [ ! -f $ZPLUG_HOME/init.zsh ]; then
   return
 fi
-if [ -z $(command -v tmux) ]; then
-  echo '"tmux" not found.'
-  return
-fi
 
 source $ZPLUG_HOME/init.zsh
 
-if [ -f ${CNF_ROOT}/01.zplug/plugin.zsh ]; then
-  source ${CNF_ROOT}/01.zplug/plugin.zsh
+if [ ! -f ${CNF_ROOT}/01.zplug/plugin.zsh ]; then
+  return
 fi
+
+source ${CNF_ROOT}/01.zplug/plugin.zsh
 
 if ! zplug check --verbose; then
   printf "Install? [y/N]: "
