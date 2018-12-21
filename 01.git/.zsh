@@ -1,3 +1,6 @@
+# git_super_status() {
+# }
+
 if [ -z $(command -v gitstatus) ]; then
   return
 fi
