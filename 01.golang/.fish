@@ -1,4 +1,8 @@
+if test -z (command -v go)
+  exit
+end
+
 if test -z $GOPATH
-  set GOPATH $HOME/repos
+  set -x GOPATH $HOME/repos
 end
 set_path $GOPATH/bin
