@@ -1,3 +1,5 @@
+source $CNF_ROOT/02.git/git-prompt.fish
+
 alias g='git'
 alias ga='git add'
 alias ga.='git add .'
