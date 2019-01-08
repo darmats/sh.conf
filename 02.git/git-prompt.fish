@@ -52,8 +52,8 @@ function git_status
   if test "$git_untracked" -ne "0"
     set st {$st}{$GIT_PROMPT_UNTRACKED}{$git_untracked}{$GIT_PROMPT_RESET}
   end
-  if test "$git_changed" -ne "0"; and test "$git_conflicts" -ne "0"; and test "$git_staged" -ne "0"; and test "$git_untracked" -ne "0"
-    set st {$st}{$GIT_PROMPT_CLEAN}
+  if test "$git_changed" -eq "0"; and test "$git_conflicts" -eq "0"; and test "$git_staged" -eq "0"; and test "$git_untracked" -eq "0"
+    set st {$st}{$GIT_PROMPT_CLEAN}{$GIT_PROMPT_RESET}
   end
 
   set st {$st}{$GIT_PROMPT_SUFFIX}
