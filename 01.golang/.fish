@@ -1,4 +1,4 @@
-if test -z (command -v go)
+if not test (command -v go)
   exit
 end
 

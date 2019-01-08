@@ -1,4 +1,4 @@
-if test -z (command -v ghq)
+if not test (command -v ghq)
   exit
 end
 
