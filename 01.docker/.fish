@@ -38,7 +38,7 @@ alias dmi='docker-machine inspect'
 alias dmls='docker-machine ls'
 alias dml='dmls'
 
-function dmc
+function dme
   if test (count $argv) -eq 0
     eval (docker-machine env)
   else

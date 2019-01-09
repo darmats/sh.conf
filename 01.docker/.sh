@@ -47,7 +47,7 @@ alias dmi='docker-machine inspect'
 alias dmls='docker-machine ls'
 alias dml='dmls'
 
-function dmc() {
+function dme() {
   if [ $# -eq 0 ]; then
     eval $(docker-machine env)
   else
