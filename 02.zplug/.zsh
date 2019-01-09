@@ -14,11 +14,11 @@ fi
 
 source $ZPLUG_HOME/init.zsh
 
-if [ ! -f ${CNF_ROOT}/01.zplug/plugin.zsh ]; then
+if [ ! -f ${CNF_ROOT}/02.zplug/plugin.zsh ]; then
   return
 fi
 
-source ${CNF_ROOT}/01.zplug/plugin.zsh
+source ${CNF_ROOT}/02.zplug/plugin.zsh
 
 if ! zplug check --verbose; then
   printf "Install? [y/N]: "
