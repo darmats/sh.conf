@@ -1,4 +1,4 @@
-if not test -z (command -v direnv)
+if not test (command -v direnv)
   exit
 end
 
