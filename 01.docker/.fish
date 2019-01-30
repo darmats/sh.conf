@@ -1,5 +1,6 @@
 # docker
 alias dk='docker'
+alias dkr='docker run --rm -it'
 alias dkps='docker ps'
 alias dkpsa='docker ps -a'
 alias dki='docker images'
@@ -43,5 +44,13 @@ function dme
     eval (docker-machine env)
   else
     eval (docker-machine env $argv[1])
+  end
+end
+
+function dmsync
+  if test (count $argv) -eq 0
+    docker-machine ssh default "sudo date -u (date -u +%m%d%H%M%Y)"
+  else
+    docker-machine ssh $argv[1] "sudo date -u (date -u +%m%d%H%M%Y)"
   end
 end

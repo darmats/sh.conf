@@ -3,6 +3,7 @@ if [ -z $(command -v docker) ]; then
   return
 fi
 alias dk='docker'
+alias dkr='docker run --rm -it'
 alias dkps='docker ps'
 alias dkpsa='docker ps -a'
 alias dki='docker images'
@@ -52,5 +53,13 @@ function dme() {
     eval $(docker-machine env)
   else
     eval $(docker-machine env ${1})
+  fi
+}
+
+function dmsync() {
+  if [ $# -eq 0 ]; then
+    docker-machine ssh default "sudo date -u $(date -u +%m%d%H%M%Y)"
+  else
+    docker-machine ssh ${1} "sudo date -u $(date -u +%m%d%H%M%Y)"
   fi
 }
