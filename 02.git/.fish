@@ -41,8 +41,10 @@ alias gmas='git checkout master; and git pull'
 alias gdev='git checkout develop; and git pull'
 alias gl='git log'
 alias glo='gl --oneline'
-alias glg="gl --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+alias glg="gl --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative"
+alias glge="gl --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an (%ae)>%Creset' --abbrev-commit --date=relative"
 alias glga="glg --all"
+alias glgea="glge --all"
 alias glc='git shortlog -sn --no-merges'
 alias gdelmrgd='git fetch; and git branch --merged | egrep -v "\\*|master|develop" | xargs -I % git branch -d %'
 alias gunsetremote='git config --unset branch.(git rev-parse --abbrev-ref HEAD).merge'
