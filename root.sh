@@ -13,3 +13,7 @@ for file in `\find ${CNF_ROOT} -type f -name .sh | sort`; do
   source $file
   # echo $file
 done
+
+if [ -n $(command -v stty) ]; then
+  stty stop undef
+fi
