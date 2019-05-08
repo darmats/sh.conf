@@ -1,5 +1,3 @@
-if [ -z $(command -v ${HOME}/.nodebrew/current/bin/node) ]; then
-  return
+if [ -d ${HOME}/.nodebrew/current/bin ] ; then
+  export PATH=${HOME}/.nodebrew/current/bin:${PATH}
 fi
-
-export PATH=${HOME}/.nodebrew/current/bin:${PATH}

@@ -1,5 +1,3 @@
-if [ -z $(command -v composer) ]; then
-  return
+if [ -d ${HOME}/.composer/vendor/bin ] ; then
+  export PATH=$PATH:${HOME}/.composer/vendor/bin
 fi
-
-export PATH=$PATH:~/.composer/vendor/bin
