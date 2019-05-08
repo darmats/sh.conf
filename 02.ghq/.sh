@@ -1,3 +1,3 @@
 if [ -z $GHQ_ROOT ]; then
-  export GHQ_ROOT=${GOPATH}"/src"
+  export GHQ_ROOT=${HOME}"/repos/src"
 fi

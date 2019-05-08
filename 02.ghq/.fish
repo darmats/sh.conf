@@ -1,3 +1,3 @@
 if test -z $GHQ_ROOT
-  set -x GHQ_ROOT $GOPATH/src
+  set -x GHQ_ROOT $HOME/repos/src
 end
