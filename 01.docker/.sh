@@ -32,6 +32,8 @@ alias dce='docker-compose exec'
 alias dcr='docker-compose run --rm'
 alias dcu='docker-compose up -d'
 alias dcps='docker-compose ps'
+alias dcl='docker-compose logs'
+alias dclf='docker-compose logs -f'
 
 # docker-machine
 alias dm='docker-machine'
