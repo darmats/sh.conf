@@ -1,3 +1,6 @@
+if [ -f ${HOME}/.zplugin/bin/zplugin.zsh ]; then
+  return
+fi
 if [ -z $ZPLUG_HOME ]; then
   if [ -f ${HOME}/.zplug/init.zsh ]; then
     export ZPLUG_HOME=${HOME}/.zplug
