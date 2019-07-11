@@ -9,7 +9,11 @@ source ${CNF_ROOT}/root.sh
 export HISTCONTROL=ignoreboth
 export HISTIGNORE="fg*:bg*:history*"
 
-for file in `\find ${CNF_ROOT} -type f -name .bash | sort`; do
-  source $file
-  # echo $file
+source $CNF_ROOT/list.sh
+for CNF_SH in $CNF_LIST; do
+  f=${CNF_ROOT}/${CNF_SH}/.bash
+  if [ -f $f ]; then
+    source $f
+    # echo $f
+  fi
 done
