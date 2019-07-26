@@ -8,6 +8,7 @@ CNF_LIST=(
     ghq
     git
   nodejs
+    typescript
   php
   rust
   zplugin
