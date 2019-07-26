@@ -1,4 +1,4 @@
-source ${CNF_ROOT}/00.shell/prompt.zsh
+source ${CNF_ROOT}/shell/prompt.zsh
 
 alias -g ...='../../'
 alias -g ....='../../../'

@@ -18,6 +18,14 @@ function _gcop() {
   git checkout $1 && git pull
 }
 
+function _gcm() {
+  if [ $# -eq 0 ]; then
+    git commit --cleanup=scissors
+  else
+    git commit -m $@
+  fi
+}
+
 alias g='git'
 alias ga='git add'
 alias ga.='git add .'
@@ -50,9 +58,9 @@ alias grbi='git rebase -i'
 alias grbc='git rebase --continue'
 alias greset='git reset'
 alias grst='greset'
-alias gca='git commit --amend'
+alias gca='git commit --amend --cleanup=scissors'
 alias gcan='git commit --amend --no-edit'
-alias gcm='git commit -m'
+alias gcm='_gcm'
 alias gcv='git commit -v --cleanup=scissors'
 alias gicm='git commit --allow-empty -m "Initial commit."'
 alias gmas='git checkout master && git pull'

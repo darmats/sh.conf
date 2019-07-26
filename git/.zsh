@@ -5,7 +5,7 @@ if [ -z $(command -v gitstatus) ]; then
   return
 fi
 
-source ${CNF_ROOT}/02.git/git-prompt.zsh
+source ${CNF_ROOT}/git/git-prompt.zsh
 
 # override
 git_status() {
