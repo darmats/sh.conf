@@ -13,4 +13,6 @@ autoload -Uz _zplugin
 DIR=$(cd $(dirname ${BASH_SOURCE:-$0}); pwd)
 if [ -f ${DIR}/plugin.zsh ]; then
   source ${DIR}/plugin.zsh
+else
+  echo "Notice: ${DIR}/plugin.zsh does not exist."
 fi
