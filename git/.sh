@@ -18,6 +18,14 @@ function _gcop() {
   git checkout $1 && git pull
 }
 
+function _grbi() {
+  if [ $# -eq 0 ]; then
+    git rebase -i
+  else
+    git rebase -i HEAD~$1
+  fi
+}
+
 function _gcm() {
   if [ $# -eq 0 ]; then
     git commit --cleanup=scissors
@@ -54,7 +62,7 @@ alias gpush='git push'
 alias gpsh='gpush'
 alias gpso='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 alias grb='git rebase'
-alias grbi='git rebase -i'
+alias grbi='_grbi'
 alias grbc='git rebase --continue'
 alias greset='git reset'
 alias grst='greset'
