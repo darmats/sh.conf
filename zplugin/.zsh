@@ -1,3 +1,4 @@
+# https://github.com/zdharma/zplugin#installation
 if [ -z ${ZPLG_HOME} ]; then
   export ZPLG_HOME=${HOME}/.zplugin
 fi
