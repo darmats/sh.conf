@@ -3,5 +3,5 @@ if [ -z $GHQ_ROOT ]; then
 fi
 
 if [ -n $(command -v fzf) ]; then
-  alias ghqcd='cd ${GHQ_ROOT}/$(ghq list | fzf)'
+  alias cdsrc='cd ${GHQ_ROOT}/$(ghq list | fzf)'
 fi
