@@ -10,6 +10,7 @@ CNF_LIST=(
   nodejs
     typescript
   php
+  python
   rust
   zplugin
 )
