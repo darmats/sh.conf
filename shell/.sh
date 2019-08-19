@@ -26,6 +26,8 @@ case ${CNF_OS} in
     ;;
 esac
 
+alias lns='ln -s'
+
 export PATH="/usr/sbin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
