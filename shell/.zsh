@@ -1,4 +1,6 @@
-source ${CNF_ROOT}/shell/prompt.zsh
+_DIR=$(cd $(dirname ${BASH_SOURCE:-$0}); pwd)
+source ${_DIR}/prompt.zsh
+unset _DIR
 
 alias -g ...='../../'
 alias -g ....='../../../'
