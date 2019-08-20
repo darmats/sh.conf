@@ -2,6 +2,14 @@ if [ -z $(command -v git) ]; then
   return
 fi
 
+function _git_current_branch() {
+  local branch=$(git rev-parse --abbrev-ref HEAD)
+  if [ ${branch} = "HEAD" ]; then
+    return
+  fi
+  echo ${branch}
+}
+
 function _gsta() {
   git stash apply stash@{$1};
 }
@@ -50,6 +58,7 @@ alias gcp='git cherry-pick'
 alias gcot='_gcot'
 alias gcop='_gcop'
 alias gb='git branch'
+alias gbv='git branch -vv'
 alias gba='git branch -a'
 alias gf='git fetch'
 alias gfp='git fetch --prune'
@@ -60,7 +69,7 @@ alias gpl='gpull'
 alias gplr='git pull --rebase'
 alias gpush='git push'
 alias gpsh='gpush'
-alias gpso='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
+alias gpso='git push --set-upstream origin $(_git_current_branch)'
 alias grb='git rebase'
 alias grbi='_grbi'
 alias grbc='git rebase --continue'
@@ -83,4 +92,6 @@ alias glgm="glg --merges"
 alias glgma="glgm --all"
 alias glc='git shortlog -sn --no-merges'
 alias gdelmrgd='git fetch && git branch --merged | egrep -v "\\*|master|develop" | xargs -I % git branch -d %'
-alias gunsetremote='git config --unset branch.$(git rev-parse --abbrev-ref HEAD).merge'
+alias glsremote='git config -l | grep $(_git_current_branch)'
+alias gsetremote='git branch -u origin/$(_git_current_branch)'
+alias gunsetremote='git config --unset branch.$(_git_current_branch).merge && git config --unset branch.$(_git_current_branch).remote'
