@@ -1,1 +1,1 @@
-alias -g @json=' | python -m json.tool'
+alias -g @json=' | python -c "import sys,json;print json.dumps(json.loads(sys.stdin.read()),indent=4,ensure_ascii=False)"'
