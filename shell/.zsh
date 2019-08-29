@@ -10,3 +10,4 @@ if [ -n $(command -v peco) ]; then
   alias -g @p=' | peco'
 fi
 alias -g @x=' | xargs'
+alias -g @jq=' | jq'
