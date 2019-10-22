@@ -1,5 +1,5 @@
-case ${CNF_OS} in
-  'Darwin' )
+case "${OSTYPE}" in
+  darwin* )
     alias ll='ls -lG'
     alias l='ll'
     alias la='ls -lGa'
@@ -7,7 +7,7 @@ case ${CNF_OS} in
     alias tlf='tail -f'
     alias relogin="exec $(which ${CNF_SHELL}) -l"
     ;;
-  'Linux' )
+  linux* )
     alias cp='cp -i'
     alias egrep='egrep --color=auto'
     alias fgrep='fgrep --color=auto'
@@ -22,7 +22,7 @@ case ${CNF_OS} in
     alias rm='rm -i'
     ;;
   * )
-    echo "Unexpected \${CNF_OS}: ${CNF_OS}"
+    echo "Unexpected \${OSTYPE}: ${OSTYPE}"
     ;;
 esac
 
