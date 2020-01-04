@@ -10,38 +10,6 @@ function _git_current_branch() {
   echo ${branch}
 }
 
-function _gsta() {
-  git stash apply stash@{$1};
-}
-
-function _gstd() {
-  git stash drop stash@{$1};
-}
-
-function _gcot() {
-  git fetch && git checkout origin/$1;
-}
-
-function _gcop() {
-  git checkout $1 && git pull
-}
-
-function _grbi() {
-  if [ $# -eq 0 ]; then
-    git rebase -i
-  else
-    git rebase -i HEAD~$1
-  fi
-}
-
-function _gcm() {
-  if [ $# -eq 0 ]; then
-    git commit --cleanup=scissors
-  else
-    git commit -m $@
-  fi
-}
-
 alias g='git'
 alias ga='git add'
 alias ga.='git add .'
@@ -50,13 +18,21 @@ alias gst='git stash'
 alias gsts='git stash save'
 alias gstl='git stash list'
 alias gstp='git stash pop'
-alias gsta='_gsta'
-alias gstd='_gstd'
+function gsta() {
+  git stash apply stash@{$1};
+}
+function gstd() {
+  git stash drop stash@{$1};
+}
 alias gco='git checkout'
 alias gcob='git checkout -b'
 alias gcp='git cherry-pick'
-alias gcot='_gcot'
-alias gcop='_gcop'
+function gcot() {
+  git fetch && git checkout origin/$1;
+}
+function gcop() {
+  git checkout $1 && git pull
+}
 alias gb='git branch'
 alias gbv='git branch -vv'
 alias gba='git branch -a'
@@ -71,12 +47,24 @@ alias gpush='git push'
 alias gpsh='gpush'
 alias gpso='git push --set-upstream origin $(_git_current_branch)'
 alias grb='git rebase'
-alias grbi='_grbi'
+function grbi() {
+  if [ $# -eq 0 ]; then
+    git rebase -i
+  else
+    git rebase -i HEAD~$1
+  fi
+}
 alias grbc='git rebase --continue'
 alias greset='git reset'
 alias gca='git commit --amend --cleanup=scissors'
 alias gcan='git commit --amend --no-edit'
-alias gcm='_gcm'
+function gcm() {
+  if [ $# -eq 0 ]; then
+    git commit --cleanup=scissors
+  else
+    git commit -m $@
+  fi
+}
 alias gcv='git commit -v --cleanup=scissors'
 alias gicm='git commit --allow-empty -m "Initial commit."'
 alias gmas='git switch master && git pull'
