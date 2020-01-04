@@ -29,6 +29,9 @@ case "${OSTYPE}" in
 esac
 
 alias lns='ln -s'
+function mdr() {
+  mkdir -p "$@" && cd "$@"
+}
 
 export PATH="/usr/sbin:$PATH"
 export PATH="/usr/local/bin:$PATH"
