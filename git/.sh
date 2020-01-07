@@ -74,14 +74,13 @@ alias grb='git rebase'
 alias grbi='_grbi'
 alias grbc='git rebase --continue'
 alias greset='git reset'
-alias grst='greset'
 alias gca='git commit --amend --cleanup=scissors'
 alias gcan='git commit --amend --no-edit'
 alias gcm='_gcm'
 alias gcv='git commit -v --cleanup=scissors'
 alias gicm='git commit --allow-empty -m "Initial commit."'
-alias gmas='git checkout master && git pull'
-alias gdev='git checkout develop && git pull'
+alias gmas='git switch master && git pull'
+alias gdev='git switch develop && git pull'
 alias gl='git log'
 alias glo='gl --oneline'
 alias glg="gl --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative"
@@ -91,6 +90,10 @@ alias glgea="glge --all"
 alias glgm="glg --merges"
 alias glgma="glgm --all"
 alias glc='git shortlog -sn --no-merges'
+alias gsw='git switch'
+alias gswc='git switch -c'
+alias grs='git restore'
+
 alias gdelmrgd='git fetch && git branch --merged | egrep -v "\\*|master|develop" | xargs -I % git branch -d %'
 alias glsremote='git config -l | grep $(_git_current_branch)'
 alias gsetremote='git branch -u origin/$(_git_current_branch)'
