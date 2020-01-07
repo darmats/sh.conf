@@ -7,6 +7,7 @@ case "${OSTYPE}" in
     alias lh='ls -lhG'
     alias tlf='tail -f'
     alias relogin="exec $(which ${CNF_SHELL}) -l"
+    alias uuidgen='uuidgen | tr "[:upper:]" "[:lower:]"'
     ;;
   linux* )
     alias cp='cp -i'
