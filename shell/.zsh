@@ -11,3 +11,5 @@ if [ -n $(command -v peco) ]; then
 fi
 alias -g @x=' | xargs'
 alias -g @jq=' | jq'
+alias -g @upper=' | tr "[:lower:]" "[:upper:]"'
+alias -g @lower=' | tr "[:upper:]" "[:lower:]"'
