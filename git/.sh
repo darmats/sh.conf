@@ -45,7 +45,7 @@ alias gpl='gpull'
 alias gplr='git pull --rebase'
 alias gpush='git push'
 alias gpsh='gpush'
-alias gpso='git push --set-upstream origin $(_git_current_branch)'
+alias gpso='git push -u origin HEAD'
 alias grb='git rebase'
 function grbi() {
   if [ $# -eq 0 ]; then
