@@ -79,7 +79,23 @@ alias glgm="glg --merges"
 alias glgma="glgm --all"
 alias glc='git shortlog -sn --no-merges'
 alias gsw='git switch'
+function gswf() {
+  if [ $# -eq 0 ]; then
+    echo "Usage: gswf [feature-name]"
+    return 1
+  else
+    git switch feature/$1
+  fi
+}
 alias gswc='git switch -c'
+function gswcf() {
+  if [ $# -eq 0 ]; then
+    echo "Usage: gswcf [feature-name]"
+    return 1
+  else
+    git switch -c feature/$1
+  fi
+}
 alias grs='git restore'
 
 alias gdelmrgd='git fetch && git branch --merged | egrep -v "\\*|master|develop" | xargs -I % git branch -d %'
