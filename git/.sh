@@ -67,6 +67,7 @@ function gcm() {
 }
 alias gcv='git commit -v --cleanup=scissors'
 alias gicm='git commit --allow-empty -m "Initial commit."'
+alias gmai='git switch main && git pull'
 alias gmas='git switch master && git pull'
 alias gdev='git switch develop && git pull'
 alias gl='git log'
@@ -114,7 +115,7 @@ function gswch() {
 }
 alias grs='git restore'
 
-alias gdelmrgd='git fetch && git branch --merged | egrep -v "\\*|master|develop" | xargs -I % git branch -d %'
+alias gdelmrgd='git fetch && git branch --merged | egrep -v "\\*|main|master|develop" | xargs -I % git branch -d %'
 alias glsremote='git config -l | grep $(_git_current_branch)'
 alias gsetremote='git branch -u origin/$(_git_current_branch)'
 alias gunsetremote='git config --unset branch.$(_git_current_branch).merge && git config --unset branch.$(_git_current_branch).remote'
