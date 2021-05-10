@@ -87,6 +87,14 @@ function gswf() {
     git switch feature/$1
   fi
 }
+function gswh() {
+  if [ $# -eq 0 ]; then
+    echo "Usage: gswh [hotfix-name]"
+    return 1
+  else
+    git switch hotfix/$1
+  fi
+}
 alias gswc='git switch -c'
 function gswcf() {
   if [ $# -eq 0 ]; then
@@ -94,6 +102,14 @@ function gswcf() {
     return 1
   else
     git switch -c feature/$1
+  fi
+}
+function gswch() {
+  if [ $# -eq 0 ]; then
+    echo "Usage: gswch [hotfix-name]"
+    return 1
+  else
+    git switch -c hotfix/$1
   fi
 }
 alias grs='git restore'
