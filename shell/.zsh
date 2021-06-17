@@ -2,6 +2,8 @@ _DIR=$(cd $(dirname ${BASH_SOURCE:-$0}); pwd)
 source ${_DIR}/prompt.zsh
 unset _DIR
 
+setopt HIST_IGNORE_SPACE
+
 alias -g ...='../../'
 alias -g ....='../../../'
 alias -g @g=' | grep'
