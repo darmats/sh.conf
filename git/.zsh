@@ -1,15 +1,21 @@
 # git_super_status() {
 # }
 
-if [ -z $(command -v gitstatus) ]; then
+if [ "${CONF_USE_GITSTATUSD}" != "1" ] && [ -z $(command -v gitstatus) ]; then
   return
 fi
 
-source ${CNF_ROOT}/git/git-prompt.zsh
+if [ "${CONF_USE_GITSTATUSD}" = "1" ]; then
+  source ${CNF_ROOT}/git/gitstatusd.zsh
+else
+  source ${CNF_ROOT}/git/git-prompt.zsh
+fi
 
 # override
 git_status() {
-  git_super_status
+  if [ "${CONF_USE_GITSTATUSD}" != "1" ]; then
+    git_super_status
+  fi
 }
 
 # for c in {000..255}; do echo -n "\e[38;5;${c}m $c" ; [ $(($c%16)) -eq 15 ] && echo;done;echo
