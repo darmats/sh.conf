@@ -13,7 +13,7 @@ function _git_current_branch() {
 alias g='git'
 alias ga='git add'
 alias ga.='git add .'
-alias gs='git status'
+alias gs='git status -s'
 alias gst='git stash'
 alias gsts='git stash save'
 alias gstl='git stash list'
