@@ -3,13 +3,13 @@ if [ -z $GHQ_ROOT ]; then
 fi
 
 if [ -n $(command -v fzf) ]; then
-  function cdsrc() {
+  function repo() {
     if [ $# -eq 0 ]; then
-      echo "Usage: cdsrc [pattern]"
+      echo "Usage: $0 [pattern]"
       return 1
     else
       cd ${GHQ_ROOT}/$(ghq list | grep $1 | fzf)
     fi
   }
-  alias cdsrca='cd ${GHQ_ROOT}/$(ghq list | fzf)'
+  alias repo-all='cd ${GHQ_ROOT}/$(ghq list | fzf)'
 fi
