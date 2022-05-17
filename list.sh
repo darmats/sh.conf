@@ -12,5 +12,6 @@ CNF_LIST=(
   php
   python
   rust
+  asdf
   zinit
 )
